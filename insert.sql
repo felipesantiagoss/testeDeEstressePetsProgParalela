@@ -1,7 +1,18 @@
+-- Insere vários registros de uma só vez na tabela "animais".
+-- A lista entre parênteses logo após o nome da tabela define a ORDEM das colunas que serão preenchidas.
+-- Note que NÃO informamos a coluna "id": ela é gerada automaticamente (SERIAL) pelo banco.
+-- Depois do VALUES vem uma linha por animal; cada linha tem os valores na MESMA ORDEM das colunas acima:
+--   (nome, sexo, porte, idade, cor, raca, localizacao, descricao, status)
+-- As linhas são separadas por vírgula e a última termina com ponto e vírgula (;), encerrando o comando.
+-- O padrão se repete em todas as linhas abaixo; veja os 3 primeiros exemplos comentados em detalhe.
 INSERT INTO animais (nome, sexo, porte, idade, cor, raca, localizacao, descricao, status) VALUES
+-- Exemplo 1: nome 'Thor', sexo 'macho', porte 'grande', idade 'adulto', cor 'preto', raça 'Labrador', localização, descrição e status 'D' (disponível)
 ('Thor', 'macho', 'grande', 'adulto', 'preto', 'Labrador', 'Ceilândia, Brasília, DF', 'Muito brincalhão e enérgico, adora correr atrás de bolinhas.', 'D'),
+-- Exemplo 2: mesma ordem de valores; aqui uma fêmea, porte pequeno, filhote, também disponível ('D')
 ('Luna', 'fêmea', 'pequeno', 'filhote', 'branco', 'Poodle', 'Asa Sul, Brasília, DF', 'Dócil, tímida no começo, mas muito carinhosa quando ganha confiança.', 'D'),
+-- Exemplo 3: repare no último valor 'I' = indisponível (animal já adotado ou não disponível para adoção)
 ('Mel', 'fêmea', 'médio', 'adulto', 'marrom', 'Vira-lata', 'Taguatinga, Brasília, DF', 'Super dócil, se dá bem com gatos e outros cães.', 'I'),
+-- A partir daqui, todas as linhas seguem exatamente o mesmo padrão (nome, sexo, porte, idade, cor, raca, localizacao, descricao, status):
 ('Rex', 'macho', 'grande', 'idoso', 'capa preta', 'Pastor Alemão', 'Guará, Brasília, DF', 'Calmo, companheiro e ótimo cão de guarda. Precisa de espaço.', 'D'),
 ('Pipoca', 'fêmea', 'pequeno', 'filhote', 'caramelo', 'Vira-lata', 'Samambaia, Brasília, DF', 'Energia pura! Adora roer brinquedos e brincar com crianças.', 'D'),
 ('Bob', 'macho', 'médio', 'adulto', 'preto e branco', 'Border Collie', 'Águas Claras, Brasília, DF', 'Extremamente inteligente e ativo. Precisa de tutores que pratiquem atividades.', 'D'),
